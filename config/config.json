@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "mypas",
+    "password": null,
     "database": "riders",
     "host": "localhost",
     "dialect": "mysql"

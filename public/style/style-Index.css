@@ -1,0 +1,20 @@
+body {
+    background: url('/images/img08_1440x832.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+#navBackground {
+    background-color: black;
+    font-family: 'Patua One', cursive;
+}
+#pageTitle {
+
+    font-family: 'Patua One', cursive;
+    color: white;
+    margin-top: 30px;
+}
+
+
