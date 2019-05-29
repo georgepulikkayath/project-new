@@ -67,7 +67,10 @@ module.exports = function(app) {
    }
   });
   app.get("/api/check/:uvalue",function(req,res){
-  db.trip_register.findAll({
+    
+   var uid=req.params.uvalue;
+   console.log(uid);
+  /*db.trip_register.findAll({
     where:{
       userId:req.params.uvalue
     },
@@ -75,7 +78,23 @@ module.exports = function(app) {
   }).then(function(data){
     res.json(data);
   })
+  });*/
+  db.trip_details.findAll({
+    include: [{
+      model: db.trip_register,
+      where: [
+        {userId:req.params.uvalue},
+        {status:0}
+      ]
+     }]
+  }).then(function(data) {
+    /* ... */
+    
+    console.log("it worked");
+    res.json(data);
+    console.log(":", JSON.stringify(data, null, 4));
   });
+});
 
 app.post("/api/tripregister",function(req,res){
   console.log(req.body);

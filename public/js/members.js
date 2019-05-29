@@ -1,5 +1,10 @@
 var uvalue;
+var total=0;
+var userDistance;
+var userStatus;
+var startDate;
 
+// var moment = require('moment');
 function fnRegister(thisObj){
   debugger
   var trip_id=thisObj.parentElement.children[0].value;
@@ -40,10 +45,46 @@ $(document).ready(function() {
     //  document.write(today);
      console.log(today);
 
-     $.get("/api/check/:uvalue").then(function(data){
-      console.log("All trips:", JSON.stringify(data, null, 4));
+     $.get("/api/check/"+uvalue).then(function(data){
+      console.log( JSON.stringify(data, null, 4));
+      for(i=0;i<data.length;i++){
+
+      var x=data[i];
+       startDate=x.startDate;
+      console.log(startDate);
+       userStatus=x.trip_registers[i].status;
+      console.log("userstatus"+userStatus);
      
+      var userDistance=x.distance;
+ 
+  
+// var now = moment();
+// console.log("now"+now);
+var date1=new Date(today);
+console.log("date1"+date1);
+var date2=new Date(startDate);
+console.log(date2);
+if((date1>date2)&&(userStatus==0)){
+ total=total+userDistance;
+ }
+
+     }
+     console.log(total);
+     if(total>=5000)
+     {
+       console.log("a");
+
+     }
+     if(total>=2000){
+       console.log("b");
+     }
+     if(total<1000){
+       console.log("c");
+     }
+  
+    
      })
+    
      
      
      
