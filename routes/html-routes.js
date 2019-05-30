@@ -10,6 +10,21 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
+    res.sendFile(path.join(__dirname, "../views/index.html"));
+  });
+  app.get("/membersStyle", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/membersStyle");
+    }
+    res.sendFile(path.join(__dirname, "../views/membersStyle.html"));
+  });
+  
+  app.get("/home", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/members");
+    }
     res.sendFile(path.join(__dirname, "../views/home.html"));
   });
 //
