@@ -1,0 +1,67 @@
+main {
+    background: url('/images/img03_1440x832.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 500px;
+  }
+
+#navBackground {
+    background-color: black;
+    font-family: 'Patua One', cursive;
+}
+#pageTitle {
+    padding-top: 40px;
+
+    font-family: 'Patua One', cursive;
+    color: white;
+    margin-top: 40px;
+}
+
+/* .card-ImgHeight {
+    object-fit: contain;
+    
+} */
+.object-fit_fill {
+    height: 200px;
+    object-fit: fill
+}
+
+
+.circleDruiation {
+    height: 35px;
+    width: 35px;
+    padding-top: 4px;
+    border-radius: 50%;
+    display: inline-block;
+}
+  .circleTerrain {
+    height: 35px;
+    width: 35px;
+    padding-top: 4px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .circleDistance {
+    height: 35px;
+    width: 35px;
+    padding-top: 4px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .circleOrigin {
+    height: 35px;
+    width: 35px;
+    padding-top: 4px;
+    border-radius: 50%;
+    display: inline-block; 
+  }
+
+  /* footer */
+  .footerBG {
+      background-color: black;
+  }
+  .footerBlue {
+      height: 25px;
+  }

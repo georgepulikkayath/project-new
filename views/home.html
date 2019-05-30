@@ -2,63 +2,360 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style/style-Index.css">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style/style-Home.css">
 </head>
 
 <body>
-  <!-- NavBar -->
-  <nav id="navBackground" class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand text-warning" href="/">Royal Riders</a>
-      </div>
-      <ul class="nav">
-        <li class="font-weight-bold text-monospace"><a href="#">Link</a> &nbsp; </li>
-        <li>&nbsp; | &nbsp; &nbsp; </li>
-        <li class="font-weight-bold text-monospace"><a href="#">Link</a> &nbsp; </li>
-        <li>&nbsp; | &nbsp; &nbsp; </li>
-        <li class="font-weight-bold text-monospace"><a href="#">Link</a> &nbsp; </li>
-      </ul>
-    </div>
-  </nav>
 
-  <div class="container">
-    <div class="row text-center mt-5">
-      <div class="col-sm mt-5">
-        <h1 id="pageTitle" class="display-4">Royal Riders</h1>
-      </div>
-    </div>
-
-    <div class="row text-center">
-      <div class="col-sm mt-3">
-        <h5 class="text-danger">* Add explanation below *</h5>
-        <p class="font-weight-bold text-white text-monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Faucibus turpis in eu mi bibendum neque egestas. Malesuada proin libero nunc consequat interdum
-          varius.</p>
-        <div>
-        </div>
-
-        <div class="row">
-          <div class="col mt-3">
-            <a class="btn btn-primary btn-lg font-weight-bold text-uppercase" id="btn-log" href="/login"
-              role="button">Login</a>
-            &nbsp;
-
-            <a class="btn btn-primary btn-lg font-weight-bold text-uppercase" id="btn-acc" href="/signup"
-              role="button">Create An Account</a>
-            <div>
-
-              <!-- <div class="col">
-      <a class="btn btn-primary btn-lg" id="btn-acc" href="/signup" role="button">Create An account</a>
-    <div> -->
+    <!-- NavBar -->
+    <nav id="navBackground" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand text-warning" href="/home">Royal Riders</a>
             </div>
-          </div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <ul class="nav">
+                <li class="font-weight-bold text-monospace"><a href="/login">Login</a> &nbsp; </li>
+                <li>&nbsp; | &nbsp; &nbsp; &nbsp;</li>
+                <li class="font-weight-bold text-monospace"><a href="/signup"> Sign Up</a> &nbsp; </li>
+                <li>&nbsp; | &nbsp; &nbsp; &nbsp;</li>
+                <li class="font-weight-bold text-monospace"><a href="/members"> My Account</a> &nbsp; </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!-- Main Text on Image -->
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm mt-5">
+                    <h1 id="pageTitle" class="display-4">Royal Riders</h1>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-sm mt-3">
+                    <h5 class="text-warning">Become A Royal Rider</h5>
+                    <p class="font-weight-bold text-white text-monospace">
+                        Are you a veteran rider, new to the MC scene, or just looking to meet with fellow lovers of the
+                        open road. Join Royal Rider’s for the opportunity of a lifetime.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="container">
+            <div class="row text-center mt-3 mb-4">
+                <div class="col-sm">
+                    <h2 id="pageTitle" class="text-primary">Browse Our Trips</h2>
+                    <p class="">
+                        Join Royal Rider’s for the opportunity of a lifetime.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="card-deck">
+            <div class="card">
+                <img src="/images/img02_1440x832.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 id="inputCity" class="card-text">Destination City</h4>
+                    <p class="card-text mb-4">Are you a veteran rider, new to the MC scene, or just looking to meet
+                        with fellow lovers of the open road. Join Royal Rider’s for the opportunity of a lifetime..
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDruiation text-light bg-primary"><i
+                                            class="far fas fa-clock"></i></span>
+                                    <h6 id="inputDruiation" class="mt-2"> 13 days</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDistance text-light bg-primary"><i
+                                            class="far fas fa-route"></i></span>
+                                    <h6 id="inputDistance" class="mt-2"> 27,000 Miles</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleTerrain text-light bg-primary"><i
+                                            class="far fas fa-road"></i></span>
+                                    <h6 id="inputTerrain" class="mt-2"> Smooth Terrain</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleOrigin text-light bg-primary"><i
+                                            class="far fas fa-map-marker-alt"></i></span>
+                                    <h6 id="inputOrigin" class="mt-2"> Philadelphia, PA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/images/img05_1440x832.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 id="inputCity" class="card-text">Destination City</h4>
+                    <p class="card-text mb-4">Are you a veteran rider, new to the MC scene, or just looking to meet
+                        with fellow lovers of the open road. Join Royal Rider’s for the opportunity of a lifetime..
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDruiation text-light bg-primary"><i
+                                            class="far fas fa-clock"></i></span>
+                                    <h6 id="inputDruiation" class="mt-2"> 13 days</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDistance text-light bg-primary"><i
+                                            class="far fas fa-route"></i></span>
+                                    <h6 id="inputDistance" class="mt-2"> 27,000 Miles</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleTerrain text-light bg-primary"><i
+                                            class="far fas fa-road"></i></span>
+                                    <h6 id="inputTerrain" class="mt-2"> Smooth Terrain</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleOrigin text-light bg-primary"><i
+                                            class="far fas fa-map-marker-alt"></i></span>
+                                    <h6 id="inputOrigin" class="mt-2"> Philadelphia, PA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="card-deck mt-5">
+            <div class="card">
+                <img src="/images/img06_1440x832.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 id="inputCity" class="card-text">Destination City</h4>
+                    <p class="card-text mb-4">Are you a veteran rider, new to the MC scene, or just looking to meet
+                        with fellow lovers of the open road. Join Royal Rider’s for the opportunity of a lifetime..
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDruiation text-light bg-primary"><i
+                                            class="far fas fa-clock"></i></span>
+                                    <h6 id="inputDruiation" class="mt-2"> 13 days</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDistance text-light bg-primary"><i
+                                            class="far fas fa-route"></i></span>
+                                    <h6 id="inputDistance" class="mt-2"> 27,000 Miles</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleTerrain text-light bg-primary"><i
+                                            class="far fas fa-road"></i></span>
+                                    <h6 id="inputTerrain" class="mt-2"> Smooth Terrain</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleOrigin text-light bg-primary"><i
+                                            class="far fas fa-map-marker-alt"></i></span>
+                                    <h6 id="inputOrigin" class="mt-2"> Philadelphia, PA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="/images/img08_1440x832.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 id="inputCity" class="card-text">Destination City</h4>
+                    <p class="card-text mb-4">Are you a veteran rider, new to the MC scene, or just looking to meet
+                        with fellow lovers of the open road. Join Royal Rider’s for the opportunity of a lifetime..
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDruiation text-light bg-primary"><i
+                                            class="far fas fa-clock"></i></span>
+                                    <h6 id="inputDruiation" class="mt-2"> 13 days</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDistance text-light bg-primary"><i
+                                            class="far fas fa-route"></i></span>
+                                    <h6 id="inputDistance" class="mt-2"> 27,000 Miles</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleTerrain text-light bg-primary"><i
+                                            class="far fas fa-road"></i></span>
+                                    <h6 id="inputTerrain" class="mt-2"> Smooth Terrain</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleOrigin text-light bg-primary"><i
+                                            class="far fas fa-map-marker-alt"></i></span>
+                                    <h6 id="inputOrigin" class="mt-2"> Philadelphia, PA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card-deck mt-5">
+            <div class="card">
+                <img src="/images/img01_1440x832.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 id="inputCity" class="card-text">Destination City</h4>
+                    <p class="card-text mb-4">Are you a veteran rider, new to the MC scene, or just looking to meet
+                        with fellow lovers of the open road. Join Royal Rider’s for the opportunity of a lifetime..
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDruiation text-light bg-primary"><i
+                                            class="far fas fa-clock"></i></span>
+                                    <h6 id="inputDruiation" class="mt-2"> 13 days</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDistance text-light bg-primary"><i
+                                            class="far fas fa-route"></i></span>
+                                    <h6 id="inputDistance" class="mt-2"> 27,000 Miles</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleTerrain text-light bg-primary"><i
+                                            class="far fas fa-road"></i></span>
+                                    <h6 id="inputTerrain" class="mt-2"> Smooth Terrain</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleOrigin text-light bg-primary"><i
+                                            class="far fas fa-map-marker-alt"></i></span>
+                                    <h6 id="inputOrigin" class="mt-2"> Philadelphia, PA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="/images/img09_1440x832.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 id="inputCity" class="card-text">Destination City</h4>
+                    <p class="card-text mb-4">Are you a veteran rider, new to the MC scene, or just looking to meet
+                        with fellow lovers of the open road. Join Royal Rider’s for the opportunity of a lifetime..
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDruiation text-light bg-primary"><i
+                                            class="far fas fa-clock"></i></span>
+                                    <h6 id="inputDruiation" class="mt-2"> 13 days</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleDistance text-light bg-primary"><i
+                                            class="far fas fa-route"></i></span>
+                                    <h6 id="inputDistance" class="mt-2"> 27,000 Miles</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleTerrain text-light bg-primary"><i
+                                            class="far fas fa-road"></i></span>
+                                    <h6 id="inputTerrain" class="mt-2"> Smooth Terrain</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <span class="circleOrigin text-light bg-primary"><i
+                                            class="far fas fa-map-marker-alt"></i></span>
+                                    <h6 id="inputOrigin" class="mt-2"> Philadelphia, PA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerBG">
+        <div class="container mt-5">
+
+            <div class="row text-center">
+                <div class="col-sm mt-3">
+                    <h1 id="pageTitle" class="">You're Almost There</h1>
+                    <p class="text-light">Sign in or create an account to explore all of our offerings.</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm-4 offset-md-4 mb-5 mt-4">
+                    <a class="btn btn-primary btn-lg btn-block font-weight-bold text-uppercase" id="btn-log"
+                        href="/members" role="button">Select your trip</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerBlue bg-warning"></div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </body>
 
