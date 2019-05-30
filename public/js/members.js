@@ -1,15 +1,25 @@
+
+
 var uvalue;
 var total=0;
 var userDistance;
 var userStatus;
-var startDate;
+var endDate;
+var dest;
 
 // var moment = require('moment');
+function fnStatus(thisObj){
+ var trid=thisObj.parentElement.children[0].value;
+
+ var udistance=thisObj.parentElement.children[1].value;
+
+ }
 function fnRegister(thisObj){
   debugger
   var trip_id=thisObj.parentElement.children[0].value;
   console.log(trip_id);
   console.log(uvalue);
+
   $.post("api/tripregister",{
     userId:uvalue,
     status:0,
@@ -21,6 +31,8 @@ function fnRegister(thisObj){
   
   
 }
+
+
 
 $(document).ready(function() {
   
@@ -43,52 +55,54 @@ $(document).ready(function() {
      
      today = mm + '/' + dd + '/' + yyyy;
     //  document.write(today);
-     console.log(today);
+     
 
      $.get("/api/check/"+uvalue).then(function(data){
       console.log( JSON.stringify(data, null, 4));
       for(i=0;i<data.length;i++){
-
+       debugger
       var x=data[i];
-       startDate=x.startDate;
-      console.log(startDate);
-       userStatus=x.trip_registers[i].status;
+    
+       endDate=x.endDate;
+       dest=x.destination;
+       userStatus=x.trip_registers[0].status;
+       tripId=x.trip_registers[0].id;
       console.log("userstatus"+userStatus);
      
-      var userDistance=x.distance;
+       userDistance=x.distance;
  
-  
+ 
 // var now = moment();
 // console.log("now"+now);
 var date1=new Date(today);
 console.log("date1"+date1);
-var date2=new Date(startDate);
-console.log(date2);
+
+
+var date2=new Date(endDate);
+console.log("end"+date2);
+
+
+
+debugger
 if((date1>date2)&&(userStatus==0)){
- total=total+userDistance;
- }
-
-     }
-     console.log(total);
-     if(total>=5000)
-     {
-       console.log("a");
-
-     }
-     if(total>=2000){
-       console.log("b");
-     }
-     if(total<1000){
-       console.log("c");
-     }
+  var str="";
+  str+="<div>";
+  str+="<input type=hidden value="+tripId+">";
+  str+="<input type=hidden value="+userDistance+">";
+  str+="<p>Did you go to "+dest+    "\t?</p>";
+  str+="<button onClick=fnStatus(this)>yes</button>"; 
   
-    
-     })
-    
-     
-     
-     
-    });
+  str+="<button id=btn-no>no</button>";
+  str+="</div>"
+ 
+ }
+ console.log("it worked"+i);
+ $("#pop").append(str); 
+ }
+   
+   
+   })
+});
   
    btn_trip.on("click",function(event){
      debugger
@@ -103,7 +117,7 @@ if((date1>date2)&&(userStatus==0)){
          str+="<input type=hidden value="+trip[i].id+">";
         str+="<p>"+trip[i].destination+"</h1>";
         str+="<p>"+trip[i].startDate+"</p>";
-        str+="<p>"+trip[i].duration+"</p>";
+        str+="<p>"+trip[i].endDate+"</p>";
         str+="<p>"+trip[i].distance+"</p>";
         str+="<p>"+trip[i].origin+"</p>";
          str+="<button onClick=fnRegister(this)>Register</button>";
@@ -120,4 +134,5 @@ if((date1>date2)&&(userStatus==0)){
   
     
   });
+  
  

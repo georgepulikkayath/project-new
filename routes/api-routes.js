@@ -70,15 +70,6 @@ module.exports = function(app) {
     
    var uid=req.params.uvalue;
    console.log(uid);
-  /*db.trip_register.findAll({
-    where:{
-      userId:req.params.uvalue
-    },
-    include:[db.trip_details]
-  }).then(function(data){
-    res.json(data);
-  })
-  });*/
   db.trip_details.findAll({
     include: [{
       model: db.trip_register,

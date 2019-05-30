@@ -10,10 +10,11 @@ module.exports=function(sequelize,DataTypes){
           type:DataTypes.STRING,
           allownull:false
       },
-      duration:{
-          type:DataTypes.INTEGER,
-          allownull:false
+      endDate:{
+         type:DataTypes.STRING,
+         allownull:false
       },
+   
       distance:{
           type:DataTypes.INTEGER,
           allownull:false
