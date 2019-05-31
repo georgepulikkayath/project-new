@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        
 
     <link rel="stylesheet" href="/style/style-membersStyle.css">
 </head>
@@ -33,7 +34,7 @@
         </div>
     </nav>
 
-<!-- member name populates here -->
+    <!-- member name populates here -->
     <main>
         <div class="container">
             <div class="row text-center mb-4">
@@ -49,38 +50,14 @@
         </div>
     </main>
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Launch demo modal
-      </button>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- all trip information -->
+
+    <!-- all trip information -->
     <section id="tripPopulate">
         <div class="container">
             <div class="row mt-3 mb-4">
                 <div class="col-sm">
-                    <h2 id="pageTitle" class="text-primary">Upcomming Trips</h2>
+                    <h2 id="pageTitle" class="text-primary">My Upcomming Trips</h2>
                 </div>
             </div>
         </div>
@@ -94,8 +71,37 @@
                         <li>Start Date: 00/00/00</li>
                         <li>End Date: 00/00/00</li>
                     </ul>
+                    <!-- Button trigger modal -->
 
-                    <button type="submit" id="trip-btn"
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Congratulations</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <div class="member-name">
+                                        <h2 id="pageTitle" class="text-primary">You Reserved Your Trip!</h2>
+                                    </div>
+                                    <p class="mb-5">
+                                        Don't forget to book another Royal Rider’s trip.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="trip-btn" data-target="#myModal"
                         class="btn btn-warning btn-lg btn-block font-weight-bold text-uppercase">Reserve</button>
                 </div>
             </div>
@@ -107,7 +113,7 @@
         <div class="container">
             <div class="row mt-3 mb-4">
                 <div class="col-sm">
-                    <h2 id="pageTitle" class="text-primary">Reserved Trips</h2>
+                    <h2 id="pageTitle" class="text-primary">My Reserved Trips</h2>
                 </div>
             </div>
         </div>
@@ -116,23 +122,26 @@
 
 
     <div class="footerBG bg-primary">
-            <div class="container mt-5">
-    
-                <div class="row text-center">
-                    <div class="col-sm mt-3 mb-5">
-                        <h1 id="pageTitle" class="mb-2">You've Traveled <span id="travelMiles">(x x x) </span>Miles.</h1>
-                        <p class="text-light mb-5">Expand your miles by booking another trip.</p>
-                    </div>
+        <div class="container mt-5">
+
+            <div class="row text-center">
+                <div class="col-sm mt-3 mb-5">
+                    <h1 id="pageTitle" class="mb-2">You've Traveled <span id="travelMiles">(x x x) </span>Miles.</h1>
+                    <p class="text-light mb-5">Expand your miles by booking another trip.</p>
                 </div>
-                
             </div>
+
         </div>
-        <div class="footerBlue bg-warning"></div>
+    </div>
+    <div class="footerBlue bg-warning"></div>
 
 
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/membersStyle.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 
 </html>

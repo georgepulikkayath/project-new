@@ -4,8 +4,13 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    
   }
+  #imgText{
+    text-shadow: 1px 1px 10px #181818;
 
+  }
+ 
 #navBackground {
     background-color: black;
     font-family: 'Patua One', cursive;
@@ -15,6 +20,7 @@ body {
     font-family: 'Patua One', cursive;
     color: white;
     margin-top: 30px;
+    text-shadow: 1px 1px 8px #3d3d3d;
 }
 
 
