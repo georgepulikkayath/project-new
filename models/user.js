@@ -28,6 +28,11 @@ module.exports = function(sequelize, DataTypes) {
           category:{
               type:DataTypes.STRING,
               allowNull:true
+          },
+          distance:{
+            type:DataTypes.INTEGER,
+            allowNull:true,
+            defaultValue:0
           }
         });    
         User.prototype.validPassword = function(password) {
