@@ -66,6 +66,18 @@ module.exports = function (app) {
       });
     }
   });
+  app.get("/api/history/:uvalue",function(req,res){
+   db.trip_details.findAll({
+     include: [{
+       model:db.trip_register,
+       where:[
+         {userId:req.params.uvalue}
+       ]
+     }]
+   }).then(function(data){
+     res.json(data);
+   })
+  })
   app.get("/api/check/:uvalue", function (req, res) {
 
     var uid = req.params.uvalue;

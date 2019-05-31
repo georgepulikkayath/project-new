@@ -31,6 +31,9 @@ module.exports = function(app) {
 app.get("/signup",function(req,res){
   res.sendFile(path.join(__dirname,"../views/signup.html"));
 })
+app.get("/history",function(req,res){
+  res.sendFile(path.join(__dirname,"../views/history.html"));
+})
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {

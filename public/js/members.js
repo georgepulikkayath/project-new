@@ -10,6 +10,7 @@ var d1;
 
 // var moment = require('moment');
 function fnStatus(thisObj) {
+  
   var trid = thisObj.parentElement.children[0].value;
 
   var udistance = thisObj.parentElement.children[1].value;
@@ -20,7 +21,7 @@ function fnStatus(thisObj) {
     method: "PUT",
     url: "/api/tripstatus/" + trid
   }).then(function () {
-
+    
   })
   total = total + newDistance;
   console.log("total dist" + total);
@@ -28,7 +29,8 @@ function fnStatus(thisObj) {
 
 
     d1 = data.distance;
-    console.log("fgghhjjk"+d1);
+   
+    
     var d2 = d1 + total;
   
     $.ajax({
@@ -39,8 +41,8 @@ function fnStatus(thisObj) {
         distance: d2
       }
     }).then(function () {
-
-
+    
+     
     })
   })
 }
@@ -69,17 +71,28 @@ function fnRegister(thisObj) {
 
 $(document).ready(function () {
 
+
   var btn_trip = $("#btn");
+  var link_user=$("#history");
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
+
+
   $.get("/api/user_data").then(function (data) {
+    debugger
     $(".member-name").text(data.email);
+   
 
     //   localStorage.setItem('uid',data.id);
     // uvalue=localStorage.getItem(uid);
 
     sessionStorage.setItem("uid", data.id);
     uvalue = sessionStorage.getItem("uid");
+    $.get("/api/userDistance/"+uvalue, function (data) {
+      d1=data.distance
+     $("#travelMiles").append(d1);
+
+    });
 
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -138,10 +151,15 @@ $(document).ready(function () {
 
     })
   });
+  
+
+    
+    
+ 
 
   btn_trip.on("click", function (event) {
-    debugger
-    event.preventDefault();
+     debugger
+     event.preventDefault();
 
     $.get("/api/trips").then(function (trip) {
 
@@ -160,7 +178,7 @@ $(document).ready(function () {
 
 
       }
-      $("#trips").append(str);
+      $("#tripPost").append(str);
 
 
     })
@@ -168,6 +186,6 @@ $(document).ready(function () {
 
 
 
-});
+ });
 
 
